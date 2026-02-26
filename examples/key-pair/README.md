@@ -51,7 +51,7 @@ This downloads the required provider plugins (AWS and TLS providers):
 terraform init
 ```
 
-**What happens:** Terraform downloads the AWS and TLS provider plugins needed to execute this configuration.
+**What happens:** Terraform downloads the AWS, TLS, and Local provider plugins needed to execute this configuration.
 
 ### Step 3: Review the Execution Plan
 
@@ -124,10 +124,11 @@ terraform {
   required_providers {
     aws = { ... }
     tls = { ... }
+    local = { ... }
   }
 }
 ```
-This specifies which provider plugins Terraform needs to download.
+This specifies which provider plugins Terraform needs to download (AWS, TLS, and Local).
 
 #### 3. RSA Key Generation
 ```hcl
